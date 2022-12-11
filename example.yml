@@ -1,0 +1,21 @@
+
+CSV1:
+  - old_field_name: author
+    new_field_name: author
+    functions:
+      - format_name:
+  - old_field_name: title
+    new_field_name: title
+  - old_field_name: html
+    new_field_name: text
+    functions:
+      - clean_html:
+  - old_field_name: tags
+    new_field_name: tags
+    functions:
+      - format_tags: {separator: ','}
+  - old_field_name: text
+    new_field_name: entities
+    functions:
+      - remove_stopwords:
+      - extract_entities:
